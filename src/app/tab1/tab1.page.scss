@@ -1,0 +1,29 @@
+ion-item {
+  border-radius: 10px;
+}
+
+ion-item:nth-child(2) {
+  margin-top: 10px;
+}
+
+#values {
+  padding: 20px 10px;
+}
+
+#buttons {
+  padding: 0 10px;
+
+  .topButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lowButtons {
+    display: flex;
+  }
+}
+
+#result {
+  padding: 20px 10px;
+}
