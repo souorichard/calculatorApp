@@ -1,22 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Calculadora
-    </ion-title>
+    <div class="top-bar">
+      <div class="title">
+        <span>Calculadora</span>
+      </div>
+      <div class="buttons">
+        <button>
+          <ion-icon name="remove-outline"></ion-icon>
+        </button>
+        <button>
+          <ion-icon name="browsers-outline"></ion-icon>
+        </button>
+        <button>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+    <div class="low-bar">
+      <div class="menu">
+        <ion-button fill="clear" color="dark">
+          <ion-icon name="reorder-three-outline"></ion-icon>
+        </ion-button>
+        <span>Padrão</span>
+      </div>
+      <div class="historic">
+        <ion-button fill="clear" color="dark">
+          <ion-icon name="timer-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <section id="values">
-    <ion-item>
-      <ion-label position="stacked">Operação</ion-label>
-      <ion-input placeholder="Digite a operação"></ion-input>
-    </ion-item>
-  </section>
-
-  <section id="result">
-    <ion-item>
-      <ion-label>Resultado:</ion-label>
-    </ion-item>
-  </section>
+  <ion-item class="operation">
+    <ion-label position="stacked">Operação</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item class="operation">
+    <ion-label position="stacked">Resultado</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
 </ion-content>

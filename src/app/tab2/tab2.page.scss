@@ -1,15 +1,73 @@
-ion-item {
-  border-radius: 10px;
+@import '../config-scss/rem-calc.scss';
+
+//All Settings
+ion-icon {
+  font-size: rem-calc(24);
 }
 
-ion-item:nth-child(2) {
-  margin-top: 10px;
-}
+ion-toolbar {
+  height: rem-calc(75);
 
-#values {
-  padding: 20px 10px;
-}
+  .top-bar {
+    height: rem-calc(30);
+    padding: 0 0 0 rem-calc(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-#result {
-  padding: 0 10px;
+    .title {
+      height: rem-calc(30);
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: rem-calc(12);
+        font-weight: 100;
+      }
+    }
+
+    .buttons {
+      height: rem-calc(30);
+      display: flex;
+
+      button {
+        width: rem-calc(40);
+        height: rem-calc(30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+
+        ion-icon {
+          font-size: rem-calc(14);
+        }
+
+        ion-icon[name="close-outline"] {
+          font-size: rem-calc(20);
+        }
+      }
+    }
+  }
+
+  .low-bar {
+    height: rem-calc(45);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: rem-calc(20);
+        font-weight: 400;
+      }
+    }
+
+    .historic {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
