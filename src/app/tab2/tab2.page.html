@@ -33,12 +33,44 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item class="operation">
-    <ion-label position="stacked">Operação</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item class="operation">
-    <ion-label position="stacked">Resultado</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <div class="result">
+    <p>{{ count }}</p>
+  </div>
+  <div class="m">
+    <ion-button>MC</ion-button>
+    <ion-button>MR</ion-button>
+    <ion-button>M+</ion-button>
+    <ion-button>M-</ion-button>
+    <ion-button>MS</ion-button>
+    <ion-button>M</ion-button>
+  </div>
+
+  <div class="operations">
+    <ion-button class="operations-buttons" (click)="addToCount('%')">%</ion-button>
+    <ion-button class="operations-buttons" (click)="addToCount('√')">√</ion-button>
+    <ion-button class="operations-buttons" (click)="addToCount('²')">x²</ion-button>
+    <ion-button class="operations-buttons" (click)="addToCount('1/')">⅟</ion-button>
+    <ion-button class="operations-buttons" (click)="clear()">CE</ion-button>
+    <ion-button class="operations-buttons" (click)="clear()">C</ion-button>
+    <ion-button class="operations-buttons" (click)="removeLast()">
+      <ion-icon name="backspace-outline"></ion-icon>
+    </ion-button>
+    <ion-button class="operations-buttons hover-buttons" (click)="addToCount('÷')">÷</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('7')">7</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('8')">8</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('9')">9</ion-button>
+    <ion-button class="operations-buttons hover-buttons" (click)="addToCount('x')">x</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('4')">4</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('5')">5</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('6')">6</ion-button>
+    <ion-button class="operations-buttons hover-buttons" (click)="addToCount('-')">-</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('1')">1</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('2')">2</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('3')">3</ion-button>
+    <ion-button class="operations-buttons hover-buttons" (click)="addToCount('+')">+</ion-button>
+    <ion-button class="operations-buttons" (click)="addToCount('±')">±</ion-button>
+    <ion-button class="operations-buttons other-button" (click)="addToCount('0')">0</ion-button>
+    <ion-button class="operations-buttons" (click)="addToCount(',')">,</ion-button>
+    <ion-button class="operations-buttons hover-buttons">=</ion-button>
+  </div>
 </ion-content>
