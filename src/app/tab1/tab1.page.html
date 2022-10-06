@@ -5,5 +5,48 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
+  <div class="container">
+    <ion-item>
+      <ion-label position="stacked">
+        <span>Valor 1</span>
+      </ion-label>
+      <ion-input placeholder="Digite o 1º Valor" [(ngModel)]="valor1" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">
+        <span>Valor 2</span>
+      </ion-label>
+      <ion-input placeholder="Digite o 2º Valor" [(ngModel)]="valor2" type="number"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-button expand="block" (click)="soma()">+</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button expand="block" (click)="subt()">-</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button expand="block" (click)="mult()">*</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button expand="block" (click)="div()">/</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button expand="block" (click)="menor()">></ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button expand="block" (click)="maior()"><</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item>
+      <ion-label class="result-operation">
+        <h2>Resultado: {{resultado}}</h2>
+        <h2>Operação:  {{operacao}}</h2>
+      </ion-label>
+    </ion-item>
+  </div>
 </ion-content>

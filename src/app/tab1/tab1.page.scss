@@ -1,1 +1,18 @@
+.container {
+  padding: 16px 8px;
 
+  ion-item {
+    --border-radius: 10px;
+
+    .result-operation {
+      h2 {
+        padding: 8px 0;
+        font-weight: bold;
+      }
+    }
+  }
+
+  ion-item:nth-child(2) {
+    margin-top: 1rem;
+  }
+}
